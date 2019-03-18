@@ -27,10 +27,16 @@ export default class App extends Component {
   }
 
   onRemove = (event) => {
-    this.setState(
+    console.log(this.state.items),
+      console.log(event)
+      let temp =this.state.items.filter(
+        (item,index,array) => array.splice(index,1)
+        )
+      console.log(temp)
 
-      console.log(this.state.items),
-
+    this.setState({
+      items: temp
+    }
       )
 
   }
@@ -51,8 +57,7 @@ export default class App extends Component {
       this.state.items.map((item, index) => <li key={index}>{item} <button key={index} onClick={this.onRemove}>Remove</button><button>Edit</button></li>)
     }
   </ul>
-   </section>
-  
+   </section>  
       </div>
     );
   }

@@ -167,7 +167,17 @@ function (_Component) {
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "onRemove", function (event) {
-      _this.setState(console.log(_this.state.items));
+      console.log(_this.state.items), console.log(event);
+
+      var temp = _this.state.items.filter(function (item, index, array) {
+        return array.splice(index, 1);
+      });
+
+      console.log(temp);
+
+      _this.setState({
+        items: temp
+      });
     });
 
     _this.state = {
@@ -186,7 +196,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 47
         },
         __self: this
       }, "Enter your list below", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
@@ -194,7 +204,7 @@ function (_Component) {
         onSubmit: this.onSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 49
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
@@ -202,25 +212,25 @@ function (_Component) {
         onChange: this.onChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 50
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 51
         },
         __self: this
       }, "Submit")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("section", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 53
         },
         __self: this
       }, this.state.items, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 55
         },
         __self: this
       }, this.state.items.map(function (item, index) {
@@ -228,7 +238,7 @@ function (_Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 51
+            lineNumber: 57
           },
           __self: this
         }, item, " ", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
@@ -236,13 +246,13 @@ function (_Component) {
           onClick: _this2.onRemove,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 51
+            lineNumber: 57
           },
           __self: this
         }, "Remove"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 51
+            lineNumber: 57
           },
           __self: this
         }, "Edit"));

@@ -2,7 +2,7 @@
 import Layout from '../components/MyLayout.js'
 import App from '../components/app.js'
 import Link from 'next/link'
-// import List from '../components/list';
+import List from '../components/list';
 
 const PostLink = props => (
   <li>
@@ -20,8 +20,9 @@ export default () => (
       <PostLink title="Project on awesome" />
       <PostLink title="Deploy apps with Zeit" />
     </ul>
-    <section> 
+    <section>
       <App/>
+      
     </section>
   </Layout>
 )

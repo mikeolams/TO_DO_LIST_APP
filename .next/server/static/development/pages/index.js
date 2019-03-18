@@ -110,42 +110,43 @@ var _jsxFileName = "C:\\Users\\admin1\\Desktop\\ALCWITH GOOGLE-Project\\NanoDegr
 
 
 var linkStyle = {
-  marginRight: 10
+  marginRight: 10,
+  backgroundColor: 'yellow'
 };
 
 var Header = function Header() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     style: linkStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: this
   }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     style: linkStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     },
     __self: this
   }, "To do List")));
@@ -233,7 +234,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\admin1\\Desktop\\ALCWITH GOOGLE-Project\\NanoDegreeWork\\NEXT-project\\todo-list-app\\components\\app.js";
  // import './App.css';
-// import List from './Components/list';
+// import List from '../components/list';
 
 var App =
 /*#__PURE__*/
@@ -251,6 +252,8 @@ function (_Component) {
       _this.setState({
         term: event.target.value
       });
+
+      console.log(_this.state.term);
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "onSubmit", function (event) {
@@ -260,6 +263,8 @@ function (_Component) {
         term: '',
         items: [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_this.state.items), [_this.state.term])
       });
+
+      console.log(_this.state.items, _this.state);
     });
 
     _this.state = {
@@ -275,7 +280,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 31
         },
         __self: this
       }, "test me", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
@@ -283,7 +288,7 @@ function (_Component) {
         onSubmit: this.onSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 33
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
@@ -291,13 +296,13 @@ function (_Component) {
         onChange: this.onChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 34
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 35
         },
         __self: this
       }, "Submit")));
@@ -308,6 +313,43 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
 
 
+
+/***/ }),
+
+/***/ "./components/list.js":
+/*!****************************!*\
+  !*** ./components/list.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\admin1\\Desktop\\ALCWITH GOOGLE-Project\\NanoDegreeWork\\NEXT-project\\todo-list-app\\components\\list.js";
+
+
+var List = function List(props) {
+  return console.log(props), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, props.items.map(function (item, index) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: index,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, item);
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (List);
 
 /***/ }),
 
@@ -1663,11 +1705,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_app_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/app.js */ "./components/app.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_list__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/list */ "./components/list.js");
 var _jsxFileName = "C:\\Users\\admin1\\Desktop\\ALCWITH GOOGLE-Project\\NanoDegreeWork\\NEXT-project\\todo-list-app\\pages\\index.js";
 
 
 
- // import List from '../components/list';
+
+
 
 var PostLink = function PostLink(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {

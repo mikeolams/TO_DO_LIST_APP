@@ -10,7 +10,6 @@ const Layout = (props) => (
   <div style={layoutStyle}>
     <Header />
     {props.children}
-    <app/>
   </div>
 )
 

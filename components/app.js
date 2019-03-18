@@ -14,7 +14,7 @@ export default class App extends Component {
 
   onChange = (event) => {
     this.setState({term: event.target.value});
-    console.log(this.state.term);
+    // console.log(this.state.term);
   }
 
   onSubmit = (event) => {
@@ -23,11 +23,20 @@ export default class App extends Component {
       term: '',
       items: [...this.state.items, this.state.term]
     });
-    console.log(this.state.items, this.state);
+    // console.log(this.state.items, this.state);
+  }
+
+  onRemove = (event) => {
+    this.setState(
+
+      console.log(this.state.items),
+
+      )
+
   }
 
   render() {
-    console.log( this.state.items, this.state);
+    // console.log( this.state.items, this.state);
     return (
       <div>
           Enter your list below
@@ -39,7 +48,7 @@ export default class App extends Component {
    {this.state.items}
    <ul>
     {
-      this.state.items.map((item, index) => <li key={index}>{item} <button>Remove</button><button>Edit</button></li>)
+      this.state.items.map((item, index) => <li key={index}>{item} <button key={index} onClick={this.onRemove}>Remove</button><button>Edit</button></li>)
     }
   </ul>
    </section>

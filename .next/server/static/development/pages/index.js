@@ -191,13 +191,7 @@ var Layout = function Layout(props) {
       lineNumber: 11
     },
     __self: this
-  }), props.children, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("app", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }));
+  }), props.children);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -251,9 +245,8 @@ function (_Component) {
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "onChange", function (event) {
       _this.setState({
         term: event.target.value
-      });
+      }); // console.log(this.state.term);
 
-      console.log(_this.state.term);
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "onSubmit", function (event) {
@@ -262,9 +255,12 @@ function (_Component) {
       _this.setState({
         term: '',
         items: [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_this.state.items), [_this.state.term])
-      });
+      }); // console.log(this.state.items, this.state);
 
-      console.log(_this.state.items, _this.state);
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "onRemove", function (event) {
+      _this.setState(console.log(_this.state.items));
     });
 
     _this.state = {
@@ -277,11 +273,13 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(App, [{
     key: "render",
     value: function render() {
-      console.log(this.state.items, this.state);
+      var _this2 = this;
+
+      // console.log( this.state.items, this.state);
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 41
         },
         __self: this
       }, "Enter your list below", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
@@ -289,7 +287,7 @@ function (_Component) {
         onSubmit: this.onSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 43
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
@@ -297,25 +295,25 @@ function (_Component) {
         onChange: this.onChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 44
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 45
         },
         __self: this
       }, "Submit")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("section", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 47
         },
         __self: this
       }, this.state.items, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 49
         },
         __self: this
       }, this.state.items.map(function (item, index) {
@@ -323,19 +321,21 @@ function (_Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42
+            lineNumber: 51
           },
           __self: this
         }, item, " ", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
+          key: index,
+          onClick: _this2.onRemove,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42
+            lineNumber: 51
           },
           __self: this
         }, "Remove"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42
+            lineNumber: 51
           },
           __self: this
         }, "Edit"));
@@ -367,15 +367,31 @@ var _jsxFileName = "C:\\Users\\admin1\\Desktop\\ALCWITH GOOGLE-Project\\NanoDegr
 //       props.items.map((item, index) => <li key={index}>{item}</li>)
 //     }
 //   </ul>
+// const List = props => (
+//   <ul>
+//     {
+//       console.log(props, "fellow")
+//     }
+//   </ul>
+// );
 
 var List = function List(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 19
     },
     __self: this
-  }, console.log(props, "fellow"));
+  }, props.items.map(function (item, index) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: index,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }, item);
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (List);

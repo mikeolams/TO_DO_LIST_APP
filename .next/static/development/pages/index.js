@@ -184,18 +184,19 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(App, [{
     key: "render",
     value: function render() {
+      console.log(this.state.items, this.state);
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 32
         },
         __self: this
-      }, "test me", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
+      }, "Enter your list below", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
         className: "App",
         onSubmit: this.onSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 34
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
@@ -203,16 +204,49 @@ function (_Component) {
         onChange: this.onChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 35
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 36
         },
         __self: this
-      }, "Submit")));
+      }, "Submit")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("section", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }, this.state.items, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("ul", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      }, this.state.items.map(function (item, index) {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("li", {
+          key: index,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          },
+          __self: this
+        }, item, " ", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          },
+          __self: this
+        }, "Remove"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          },
+          __self: this
+        }, "Edit"));
+      }))));
     }
   }]);
 
@@ -235,25 +269,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _jsxFileName = "C:\\Users\\admin1\\Desktop\\ALCWITH GOOGLE-Project\\NanoDegreeWork\\NEXT-project\\todo-list-app\\components\\list.js";
-
+ // <ul>
+//     {
+//       props.items.map((item, index) => <li key={index}>{item}</li>)
+//     }
+//   </ul>
 
 var List = function List(props) {
-  return console.log(props), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 10
     },
     __self: this
-  }, props.items.map(function (item, index) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-      key: index,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 7
-      },
-      __self: this
-    }, item);
-  }));
+  }, console.log(props, "fellow"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (List);

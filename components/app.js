@@ -27,13 +27,22 @@ export default class App extends Component {
   }
 
   render() {
+    console.log( this.state.items, this.state);
     return (
       <div>
-          test me
+          Enter your list below
           <form className="App" onSubmit={this.onSubmit}>
        <input value={this.state.term} onChange={this.onChange} />
        <button>Submit</button>
    </form>
+   <section>
+   {this.state.items}
+   <ul>
+    {
+      this.state.items.map((item, index) => <li key={index}>{item} <button>Remove</button><button>Edit</button></li>)
+    }
+  </ul>
+   </section>
   
       </div>
     );

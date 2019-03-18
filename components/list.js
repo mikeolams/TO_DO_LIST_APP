@@ -1,10 +1,15 @@
 import React from 'react';
 
+// <ul>
+//     {
+//       props.items.map((item, index) => <li key={index}>{item}</li>)
+//     }
+//   </ul>
+
 const List = props => (
-	console.log(props),
   <ul>
     {
-      props.items.map((item, index) => <li key={index}>{item}</li>)
+      console.log(props, "fellow")
     }
   </ul>
 );

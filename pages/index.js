@@ -22,7 +22,7 @@ export default () => (
     </ul>
     <section>
       <App/>
-      
+
     </section>
   </Layout>
 )

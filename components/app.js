@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import './App.css';
-// import List from '../components/list';
+import List from '../components/list';
 
 
 export default class App extends Component {
@@ -27,11 +27,12 @@ export default class App extends Component {
   }
 
   onRemove = (event) => {
-    console.log(this.state.items),
-      console.log(event)
+    console.log(this.state.items)
+      // console.log(event)
       let temp =this.state.items.filter(
         (item,index,array) => array.splice(index,1)
         )
+
       console.log(temp)
 
     this.setState({
@@ -57,7 +58,8 @@ export default class App extends Component {
       this.state.items.map((item, index) => <li key={index}>{item} <button key={index} onClick={this.onRemove}>Remove</button><button>Edit</button></li>)
     }
   </ul>
-   </section>  
+   </section>
+   <List items={this.state.items} /> 
       </div>
     );
   }

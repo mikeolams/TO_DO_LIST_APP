@@ -218,6 +218,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_list__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/list */ "./components/list.js");
 
 
 
@@ -228,7 +229,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\admin1\\Desktop\\ALCWITH GOOGLE-Project\\NanoDegreeWork\\NEXT-project\\todo-list-app\\components\\app.js";
  // import './App.css';
-// import List from '../components/list';
+
+
 
 var App =
 /*#__PURE__*/
@@ -260,7 +262,7 @@ function (_Component) {
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "onRemove", function (event) {
-      console.log(_this.state.items), console.log(event);
+      console.log(_this.state.items); // console.log(event)
 
       var temp = _this.state.items.filter(function (item, index, array) {
         return array.splice(index, 1);
@@ -289,7 +291,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 48
         },
         __self: this
       }, "Enter your list below", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
@@ -297,7 +299,7 @@ function (_Component) {
         onSubmit: this.onSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 50
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
@@ -305,25 +307,25 @@ function (_Component) {
         onChange: this.onChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 51
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 52
         },
         __self: this
       }, "Submit")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("section", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 54
         },
         __self: this
       }, this.state.items, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 56
         },
         __self: this
       }, this.state.items.map(function (item, index) {
@@ -331,7 +333,7 @@ function (_Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 58
           },
           __self: this
         }, item, " ", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
@@ -339,17 +341,24 @@ function (_Component) {
           onClick: _this2.onRemove,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 58
           },
           __self: this
         }, "Remove"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 58
           },
           __self: this
         }, "Edit"));
-      }))));
+      }))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_list__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        items: this.state.items,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }));
     }
   }]);
 

@@ -42,8 +42,24 @@ export default class App extends Component {
 
   }
 
+
+  onDelete = (index) => {
+    let listArr = this.state.items;
+    listArr.splice(index, 1);
+    this.setState({items: listArr})
+   
+    console.log(this.state.items)
+  }
+
+
+
   render() {
-    // console.log( this.state.items, this.state);
+    // let items = this.state.items.map((val, key) => {
+    //   return <item key={key} text={val}
+    //     deleteMethod={ () => this.onDelete(key)} />
+    //     console.log(items)
+    //   })
+
     return (
       <div>
           Enter your list below
@@ -52,10 +68,10 @@ export default class App extends Component {
        <button>Submit</button>
    </form>
    <section>
-   {this.state.items}
+   
    <ul>
     {
-      this.state.items.map((item, index) => <li key={index}>{item} <button key={index} onClick={this.onRemove}>Remove</button><button>Edit</button></li>)
+      this.state.items.map((item, index) => <li key={index}>{item} <button key={index} onClick={this.onDelete}>Remove</button><button>Edit</button></li>)
     }
   </ul>
    </section>
@@ -64,5 +80,3 @@ export default class App extends Component {
     );
   }
 }
-
-

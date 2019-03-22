@@ -1,3 +1,7 @@
+// <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
+//   <a>{props.title}</a>
+// </Link>
+
 
 import Layout from '../components/MyLayout.js'
 import App from '../components/app.js'

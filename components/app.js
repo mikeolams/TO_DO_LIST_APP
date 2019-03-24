@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import './App.css';
 import List from '../components/list';
+// import Service from '../components/service'
 
 
 export default class App extends Component {
@@ -68,15 +69,15 @@ export default class App extends Component {
        <button>Submit</button>
    </form>
    <section>
-   
    <ul>
     {
       this.state.items.map((item, index) => <li key={index}>{item} <button key={index} onClick={this.onDelete}>Remove</button><button>Edit</button></li>)
     }
   </ul>
    </section>
-   <List items={this.state.items} /> 
+    
       </div>
     );
   }
 }
+

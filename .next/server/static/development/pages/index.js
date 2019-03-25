@@ -1820,13 +1820,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Service = function Service(props) {
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", null, "Default Todo List from the server endpoint"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", null, props.shows.map(function (show) {
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", null, "Default Todo List from the server endpoint"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", null, props.todos.map(function (todo) {
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-      key: show.id
+      key: todo.id
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
-      as: "/p/".concat(show.id),
-      href: "/post?id=".concat(show.id)
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", null, show.name)));
+      as: "/p/".concat(todo.id),
+      href: "/post?id=".concat(todo.id)
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", null, todo.name)));
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_app_js__WEBPACK_IMPORTED_MODULE_4__["default"], null))));
 };
 
@@ -1852,7 +1852,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
           data = _context.sent;
           console.log("Show data fetched. Count: ".concat(data.length));
           return _context.abrupt("return", {
-            shows: data
+            todos: data
           });
 
         case 8:

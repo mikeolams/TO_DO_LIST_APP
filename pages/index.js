@@ -13,10 +13,10 @@ const Service = (props) => (
    <Layout>
     <h1>Default Todo List from the server endpoint</h1>
     <ul>
-      {props.shows.map((show) => (
-        <li key={show.id}>
-          <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
-            <a>{show.name}</a>
+      {props.todos.map((todo) => (
+        <li key={todo.id}>
+          <Link as={`/p/${todo.id}`} href={`/post?id=${todo.id}`}>
+            <a>{todo.name}</a>
           </Link>
         </li>
       ))}
@@ -36,11 +36,11 @@ Service.getInitialProps = async function() {
   console.log(`Show data fetched. Count: ${data.length}`)
 
   return {
-    shows: data
+    todos: data
   }
 }
 
-export default Service
+export default Service;
 
 
 

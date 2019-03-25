@@ -315,9 +315,7 @@ function (_Component) {
           key: index,
           onClick: _this2.onDelete
         }, "Remove"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", null, "Edit"));
-      }))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_list__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        items: this.state.items
-      }));
+      }))));
     }
   }]);
 

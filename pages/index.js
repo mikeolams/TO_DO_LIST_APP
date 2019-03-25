@@ -8,10 +8,20 @@ import App from '../components/app.js'
 import Link from 'next/link'
 import List from '../components/list'
 import fetch from 'isomorphic-unfetch'
+import PostLink from '../components/post_link.js'
 
 const Service = (props) => (
    <Layout>
-    <h1>Default Todo List from the server endpoint</h1>
+    <section>
+    <h1>My Todo List</h1>
+    <ul>
+      <PostLink title="Construction in progress.js" />
+      <PostLink title="Project on awesome" />
+      <PostLink title="Deploy apps with Zeit" />
+    </ul>
+    </section>
+    <section>
+    <h3>Default Todo List from the server endpoint</h3>
     <ul>
       {props.todos.map((todo) => (
         <li key={todo.id}>
@@ -21,11 +31,10 @@ const Service = (props) => (
         </li>
       ))}
     </ul>
-    <div>
+    </section>
     <section>
       <App/>
     </section>
-    </div>
   </Layout>
 )
 

@@ -315,7 +315,9 @@ function (_Component) {
           key: index,
           onClick: _this2.onDelete
         }, "Remove"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", null, "Edit"));
-      }))));
+      }))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_list__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        items: this.state.items
+      }));
     }
   }]);
 
@@ -338,24 +340,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _jsxFileName = "C:\\Users\\admin1\\Desktop\\ALCWITH GOOGLE-Project\\NanoDegreeWork\\NEXT-project\\todo-list-app\\components\\list.js";
- // <ul>
-//     {
-//       props.items.map((item, index) => <li key={index}>{item}</li>)
-//     }
-//   </ul>
-// const List = props => (
-//   <ul>
-//     {
-//       console.log(props, "fellow")
-//     }
-//   </ul>
-// );
+
 
 var List = function List(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 4
     },
     __self: this
   }, props.items.map(function (item, index) {
@@ -363,7 +354,7 @@ var List = function List(props) {
       key: index,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 6
       },
       __self: this
     }, item);
@@ -371,6 +362,77 @@ var List = function List(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (List);
+
+/***/ }),
+
+/***/ "./components/post_link.js":
+/*!*********************************!*\
+  !*** ./components/post_link.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+
+// const PostLink = props => (
+//   <li>
+//     <Link href={`/post?title=${props.title}`}>
+//       <a>{props.title}</a>
+//     </Link>
+//   </li>
+// )
+// export default () => (
+//   <div>
+//     <h3>My Todo List</h3>
+//     <ul>
+//       <PostLink title="Construction in progress.js" />
+//       <PostLink title="Project on awesome" />
+//       <PostLink title="Deploy apps with Zeit" />
+//     </ul>
+//   </div>
+// const Service = (props) => (
+//   <div>
+//     <h1>Batman TV Shows</h1>
+//     <ul>
+//       {props.shows.map(({show}) => (
+//         <li key={show.id}>
+//           <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
+//             <a>{show.name}</a>
+//           </Link>
+//         </li>
+//       ))}
+//     </ul>
+//   </div>
+// )
+// Service.getInitialProps = async function() {
+//   const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
+//   const data = await res.json()
+//   console.log(`Show data fetched. Count: ${data.length}`)
+//   return {
+//     shows: data
+//   }
+// }
+// export default Service
+// import Layout from '../components/MyLayout.js'
+// import Link from 'next/link'
+// import fetch from 'isomorphic-unfetch'
+// if(this.state.term){console.log(result)}
+// import Layout from '../components/MyLayout.js'
+// console.log(props.shows),
+ // import fetch from 'isomorphic-unfetch'
+
+var PostLink = function PostLink(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/post?title=".concat(props.title)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, props.title)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PostLink);
 
 /***/ }),
 
@@ -1807,6 +1869,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_list__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/list */ "./components/list.js");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_post_link_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/post_link.js */ "./components/post_link.js");
 
 
 
@@ -1819,15 +1882,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var Service = function Service(props) {
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", null, "Default Todo List from the server endpoint"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", null, props.todos.map(function (todo) {
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", null, "My Todo List"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_post_link_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    title: "Construction in progress.js"
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_post_link_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    title: "Project on awesome"
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_post_link_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    title: "Deploy apps with Zeit"
+  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, "Default Todo List from the server endpoint"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", null, props.todos.map(function (todo) {
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       key: todo.id
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
       as: "/p/".concat(todo.id),
       href: "/post?id=".concat(todo.id)
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", null, todo.name)));
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_app_js__WEBPACK_IMPORTED_MODULE_4__["default"], null))));
+  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_app_js__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
 };
 
 Service.getInitialProps =

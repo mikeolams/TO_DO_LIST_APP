@@ -75,7 +75,7 @@ export default class App extends Component {
     }
   </ul>
    </section>
-    
+   <List items={this.state.items} /> 
       </div>
     );
   }
